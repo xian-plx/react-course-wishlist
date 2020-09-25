@@ -1,63 +1,63 @@
 {
-  "name": "react-course-wishlist",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html",
-    "format": "prettier --write \"*.{js,jsx,json,css}\""
-  },
-  "prettier": {
-    "trailingComma": "all",
-    "singleQuote": true,
-    "semi": true
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xian-plx/react-course-wishlist.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/xian-plx/react-course-wishlist/issues"
-  },
-  "homepage": "https://github.com/xian-plx/react-course-wishlist#readme",
-  "dependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  },
-  "devDependencies": {
-    "eslint": "^7.9.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.21.0",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.4.0",
-    "parcel-bundler": "^1.12.4",
-    "prettier": "^2.1.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+    "name": "react-course-wishlist",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "parcel index.html",
+        "format": "prettier --write \"*.{js,jsx,json,css}\""
+    },
+    "prettier": {
+        "trailingComma": "all",
+        "singleQuote": true,
+        "semi": true
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/xian-plx/react-course-wishlist.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/xian-plx/react-course-wishlist/issues"
+    },
+    "homepage": "https://github.com/xian-plx/react-course-wishlist#readme",
+    "dependencies": {
+        "prop-types": "^15.7.2",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    },
+    "devDependencies": {
+        "eslint": "^7.9.0",
+        "eslint-config-airbnb": "^18.2.0",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-jsx-a11y": "^6.3.1",
+        "eslint-plugin-react": "^7.21.0",
+        "husky": "^4.3.0",
+        "lint-staged": "^10.4.0",
+        "parcel-bundler": "^1.12.4",
+        "prettier": "^2.1.2"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "src/**/*.{js,jsx}": [
+            "npm run lint"
+        ],
+        "src/**/*.{js,jsx,json,css,scss}": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "extends": "airbnb",
+    "env": {
+        "browser": true
+    },
+    "rules": {
+        "linebreak-style": "off"
     }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx}": [
-      "npm run lint"
-    ],
-    "src/**/*.{js,jsx,json,css,scss}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "extends": "airbnb",
-  "env": {
-    "browser": true
-  },
-  "rules": {
-    "linebreak-style": "off"
-  }
 }
