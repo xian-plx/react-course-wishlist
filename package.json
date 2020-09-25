@@ -5,13 +5,9 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "parcel index.html",
+        "start": "parcel ./src/index.html --open",
+        "lint": "eslint --fix src/**/*.{js,jsx}",
         "format": "prettier --write \"*.{js,jsx,json,css}\""
-    },
-    "prettier": {
-        "trailingComma": "all",
-        "singleQuote": true,
-        "semi": true
     },
     "repository": {
         "type": "git",
@@ -23,7 +19,12 @@
         "url": "https://github.com/xian-plx/react-course-wishlist/issues"
     },
     "homepage": "https://github.com/xian-plx/react-course-wishlist#readme",
+    "keywords": [
+        "parcel",
+        "react"
+    ],
     "dependencies": {
+        "classnames": "^2.2.6",
         "prop-types": "^15.7.2",
         "react": "^16.13.1",
         "react-dom": "^16.13.1"
@@ -49,15 +50,35 @@
             "npm run lint"
         ],
         "src/**/*.{js,jsx,json,css,scss}": [
-            "prettier --write",
-            "git add"
+            "prettier --write"
         ]
     },
-    "extends": "airbnb",
-    "env": {
-        "browser": true
+    "eslintConfig": {
+        "extends": "airbnb",
+        "env": {
+            "browser": true
+        },
+        "rules": {
+            "linebreak-style": "off",
+            "jsx-a11y/label-has-for": [
+                2,
+                {
+                    "components": [
+                        "Label"
+                    ],
+                    "required": {
+                        "some": [
+                            "nesting",
+                            "id"
+                        ]
+                    },
+                    "allowChildren": false
+                }
+            ]
+        }
     },
-    "rules": {
-        "linebreak-style": "off"
+    "prettier": {
+        "trailingComma": "all",
+        "singleQuote": true
     }
 }
